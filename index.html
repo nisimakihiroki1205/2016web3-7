@@ -24,8 +24,10 @@
   scene.add(light);
   scene.add(new THREE.AmbientLight(0x333333));
   
+  var loader = new THREE.TextureLoader();
   var geometry = new THREE.BoxGeometry(1,32,16);
   var material = new THREE.MeshStandardMaterial({color:0x00ff00})
+  map:loader.load('amanogawa.jpg')
   var cube = new THREE.Mesh(geometry,material);
   scene.add(cube);
   
